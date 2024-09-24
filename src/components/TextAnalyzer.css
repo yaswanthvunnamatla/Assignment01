@@ -1,80 +1,108 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.text-analyzer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+.input-area {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+.statistics {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.replacement {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.replacement input {
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.replacement button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.replacement button:hover {
+  background-color: #45a049;
+}
+
+.highlight {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  text-shadow: 0px 0px 8px rgba(255, 255, 0, 0.8);
+}
+
+.highlighted-text {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
   .text-analyzer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
   }
-  
+
   .input-area {
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-  }
-  
-  .statistics {
-    font-size: 1.1em;
-    color: #333;
-  }
-  
-  .replacement {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .replacement input {
-    padding: 8px;
+    height: 150px;
     font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
   }
-  
+
+  .statistics {
+    font-size: 1em;
+  }
+
+  .replacement {
+    flex-direction: column;
+  }
+
+  .replacement input,
   .replacement button {
-    padding: 10px 20px;
-    font-size: 1.1em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1em;
   }
-  
-  .replacement button:hover {
-    background-color: #45a049;
-  }
-  
-  .highlight {
-    background-color: #ffeb3b;
-    font-weight: bold;
-    text-shadow: 0px 0px 8px rgba(255, 255, 0, 0.8);
-  }
-  
-  .highlighted-text {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    background: #fff;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
-  
+}
